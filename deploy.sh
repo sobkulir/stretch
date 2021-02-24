@@ -10,7 +10,7 @@ fi
 
 git checkout -B gh-pages
 mkdir .dist
-mv src/* .dist
+mv * .dist
 rm -rf *
 mv .dist/* .
 rm -rf .dist
