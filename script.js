@@ -75,11 +75,12 @@ function renderMonth(monthIdx, activeDays) {
 
 function renderCalendar() {
   const uid = firebase.auth().currentUser.uid;
-  db.collection("users").doc(uid).get().then((doc) => {
+  const docRef = db.collection("users").doc(uid);
+  docRef.get().then((doc) => {
     if (doc.exists) {
-        renderFromDb(doc.data().activeDays);
+      renderFromDb(doc.data().activeDays);
     } else {
-        console.log("No such document!");
+      docRef.set({activeDays: []}).then(()=>renderFromDb([]));
     }
   }).catch((error) => {
       console.log("Error getting document:", error);
