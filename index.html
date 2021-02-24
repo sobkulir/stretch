@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Stretch</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="user-stuff">
+      <button id="login" class="loginout" onclick="googleSignInPopup()">Login</button>
+      <button id="logout" class="loginout" onclick="googleSignOut()">Logout</button>
+    </div>
+    <div class="content">
+      <h1>Did you stretch?</h1>
+      <div id="table"></div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAxqOahBNh6uu8eqiJAdLNFKl7U6UvcGiU",
+        authDomain: "stretch-cd073.firebaseapp.com",
+        projectId: "stretch-cd073",
+        storageBucket: "stretch-cd073.appspot.com",
+        messagingSenderId: "350264249066",
+        appId: "1:350264249066:web:72a83d278ae40858c1e593"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      var db = firebase.firestore();
+    </script>
+    <script src="google-signin.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

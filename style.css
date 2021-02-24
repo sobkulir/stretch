@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.content {
+  margin: auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+#table {
+  display: flex;
+  flex-direction: row;
+}
+
+.month {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.month-label {
+  font-weight: 800;
+  font-size: large;
+  text-transform: uppercase;
+}
+
+.day {
+  border: 1px solid;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 3px;
+  font-size: small;
+  text-align: center;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: aquamarine;
+}
+
+.user-stuff {
+  position: absolute;
+  right: 0;
+}
+
+.loginout {
+  display: none;
+}
